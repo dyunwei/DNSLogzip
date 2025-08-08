@@ -45,7 +45,7 @@ This repository contains the source code for the paper "*DNSLogzip*：A Novel Ap
 4. Create ramdisk:
    ```bash
    mkdir -p /media/ramdisk
-	mount -t tmpfs -o size=8g tmpfs /media/ramdisk
+   mount -t tmpfs -o size=8g tmpfs /media/ramdisk
    mkdir /media/ramdisk/data
    ```
 5. Set the environment variable **DNSLogzip_WorkingDir** to the path of the *DNSLogzip*.
@@ -72,15 +72,16 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
 ## EXPERIMENTS REPRODUCTION
 
 - Research questions:
-	**RQ1**: What is the overall performance of *DNSLogzip* in terms of compression ratio (CR), compression speed(CS), and decompression speed (DS)?
+  
+	RQ1: What is the overall performance of *DNSLogzip* in terms of compression ratio (CR), compression speed(CS), and decompression speed (DS)?
 	
 	*Experimental results demonstrate that DNSLogzip outperforms all baseline algorithms in both CR and CS.*
 
-- **RQ2**: What is the effect of each compression module within *DNSLogzip*?
+	RQ2: What is the effect of each compression module within *DNSLogzip*?
 	
 	*Experimental results show our key modules Data Transformer (§4.2) and Data Reducer (§4.3) of DNSLogzip can effectively improve compression ratio.*
 	
-- **RQ3**: What is the impact of different configuration settings?
+	RQ3: What is the impact of different configuration settings?
 	
 	*The effects align with expectations: increasing the chunk size (i.e., 𝐿) enhances compression ratio but reduces compression and decompression speed. In contrast, small changes in 𝐸 have a negligible impact on these metrics.*
 	
