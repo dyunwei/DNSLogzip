@@ -136,20 +136,20 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
 	
 	
 - **Result for Q1:**
-	  ![](.\img\Q1.png)
+	  ![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q1.png)
 	  
 	  
 	  
 - **Result for Q2:**
 	
-	![](.\img\Q2.png)
+	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q2.png)
 	
 	
 	
 - **Result for Q3**
 	
-	![](.\img\Q3L.png)
-	![](.\img\Q3E.png)
+	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3L.png)
+	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3E.png)
 
 ---
 
