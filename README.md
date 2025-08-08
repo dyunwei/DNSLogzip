@@ -120,8 +120,9 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
    
    cd benchmark/bin/LogArchive/
    ln -s $DNSLogzip_WorkingDir/benchmark/bin/LogArchive/Archiver /usr/local/bin
-   # Get the Compression ratio and speed of LogArchive and print it on the console.
-   sh ./eval.sh
+   chmod a+x Archiver
+   # Get the Compression ratio and speed of LogArchive and print it on the console.   
+   python ./eval.py
    cd -
   ```
   
