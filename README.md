@@ -10,14 +10,17 @@ This repository contains the source code for the paper "*DNSLogzip*：A Novel Ap
 
 - Software dependencies
 
-​     python >= 3.9.21
-​     gcc >= 11.4.1
+	python >= 3.9.21
 
-​     gzip == 1.12
-​     7za == 16.02
-​     bzip2 == 1.0.8
+	gcc >= 11.4.1
 
-​    **Recommendation:** Rocky Linux release 9.3 (Blue Onyx)
+	gzip == 1.12
+
+	7za == 16.02 (dnf install p7zip -y)
+
+	bzip2 == 1.0.8
+
+	**Recommendation:** Rocky Linux release 9.3 (Blue Onyx)
 
 - Memory (RAM)
 
@@ -42,7 +45,7 @@ This repository contains the source code for the paper "*DNSLogzip*：A Novel Ap
 4. Create ramdisk:
    ```bash
    mkdir -p /media/ramdisk
-	mount -t tmpfs -o size=8g tmpfs /media/ramdisk
+   mount -t tmpfs -o size=8g tmpfs /media/ramdisk
    mkdir /media/ramdisk/data
    ```
 5. Set the environment variable **DNSLogzip_WorkingDir** to the path of the *DNSLogzip*.
@@ -69,15 +72,16 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
 ## EXPERIMENTS REPRODUCTION
 
 - Research questions:
-	**RQ1**: What is the overall performance of *DNSLogzip* in terms of compression ratio (CR), compression speed(CS), and decompression speed (DS)?
+  
+	RQ1: What is the overall performance of *DNSLogzip* in terms of compression ratio (CR), compression speed(CS), and decompression speed (DS)?
 	
 	*Experimental results demonstrate that DNSLogzip outperforms all baseline algorithms in both CR and CS.*
 
-- **RQ2**: What is the effect of each compression module within *DNSLogzip*?
+	RQ2: What is the effect of each compression module within *DNSLogzip*?
 	
 	*Experimental results show our key modules Data Transformer (§4.2) and Data Reducer (§4.3) of DNSLogzip can effectively improve compression ratio.*
 	
-- **RQ3**: What is the impact of different configuration settings?
+	RQ3: What is the impact of different configuration settings?
 	
 	*The effects align with expectations: increasing the chunk size (i.e., 𝐿) enhances compression ratio but reduces compression and decompression speed. In contrast, small changes in 𝐸 have a negligible impact on these metrics.*
 	
@@ -117,8 +121,9 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
    
    cd benchmark/bin/LogArchive/
    ln -s $DNSLogzip_WorkingDir/benchmark/bin/LogArchive/Archiver /usr/local/bin
-   # Get the Compression ratio and speed of LogArchive and print it on the console.
-   sh ./eval.sh
+   chmod a+x Archiver
+   # Get the Compression ratio and speed of LogArchive and print it on the console.   
+   python ./eval.py
    cd -
   ```
   
@@ -138,18 +143,22 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
 - **Result for Q1:**
 	  ![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q1.png)
 	  
-	  
+	**Note**: Compression and decompression speeds are susceptible to runtime environment. The Compression ratios of DNSLogzip and general compressors should be reproducible.
 	  
 - **Result for Q2:**
 	
-	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q2.png)
+	<div align="center">
+	<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q2.png" width="50%">
+	</div>
 	
-	
+	**Note**: M0x0 indicates "No techniques applied"; M0x03 indicates "Use only the Data Transformer"; M0x7F indicates "Use full DNSLogzip (Data Transformer + Data Reducer)"
 	
 - **Result for Q3**
 	
-	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3L.png)
-	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3E.png)
+	<div align="center">
+		<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3L.png" width="50%">
+		<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3E.png" width="50%">
+	</div>
 
 ---
 
