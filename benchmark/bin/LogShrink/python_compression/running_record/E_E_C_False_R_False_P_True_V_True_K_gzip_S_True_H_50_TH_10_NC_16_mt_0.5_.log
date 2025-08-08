@@ -1,0 +1,1105 @@
+2024-12-17 10:57:48,779 - INFO - ==============================Processing dataset ISP-23_gzip===========================================
+2024-12-17 10:57:48,779 - INFO - ARGS: encode mode: E, column mode: False
+2024-12-17 10:57:58,569 - INFO - log parsing took 1.800 s, parsing into 623 templates
+2024-12-17 10:57:58,575 - INFO - Total length is 41647, cut into 833 sequences
+2024-12-17 10:57:58,618 - INFO - log parsing took 1.858 s, parsing into 626 templates
+2024-12-17 10:57:58,623 - INFO - Total length is 42380, cut into 848 sequences
+2024-12-17 10:57:58,661 - INFO - log parsing took 1.922 s, parsing into 623 templates
+2024-12-17 10:57:58,665 - INFO - log parsing took 1.914 s, parsing into 620 templates
+2024-12-17 10:57:58,670 - INFO - log parsing took 1.867 s, parsing into 616 templates
+2024-12-17 10:57:58,673 - INFO - Total length is 42321, cut into 847 sequences
+2024-12-17 10:57:58,676 - INFO - log parsing took 1.882 s, parsing into 620 templates
+2024-12-17 10:57:58,711 - INFO - Total length is 42371, cut into 848 sequences
+2024-12-17 10:57:58,747 - INFO - log parsing took 1.962 s, parsing into 618 templates
+2024-12-17 10:57:58,749 - INFO - Total length is 42205, cut into 845 sequences
+2024-12-17 10:57:58,758 - INFO - Total length is 41950, cut into 840 sequences
+2024-12-17 10:57:58,817 - INFO - Total length is 41860, cut into 838 sequences
+2024-12-17 10:57:58,820 - INFO - log parsing took 2.021 s, parsing into 622 templates
+2024-12-17 10:57:58,857 - INFO - Total length is 42102, cut into 843 sequences
+2024-12-17 10:57:58,911 - INFO - Iterative clustering took 0.335 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:57:58,919 - INFO - Iterative clustering took 0.295 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:57:58,920 - INFO - Iterative clustering took 0.247 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:57:59,128 - INFO - Iterative clustering took 0.370 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:57:59,133 - INFO - Iterative clustering took 0.275 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:57:59,150 - INFO - Iterative clustering took 0.328 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:57:59,151 - INFO - Iterative clustering took 0.440 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:57:59,214 - INFO - Iterative clustering took 0.463 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:02,345 - ERROR - exception calling callback for <Future at 0x7f91c6f0ffd0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:02,609 - ERROR - exception calling callback for <Future at 0x7f91c6f18f10 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:03,267 - ERROR - exception calling callback for <Future at 0x7f91c5dcf730 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:03,369 - ERROR - exception calling callback for <Future at 0x7f91c6f18880 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:03,490 - ERROR - exception calling callback for <Future at 0x7f91c5dcf310 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:03,560 - ERROR - exception calling callback for <Future at 0x7f91c6f18bb0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:03,638 - ERROR - exception calling callback for <Future at 0x7f91c6f18550 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:03,676 - ERROR - exception calling callback for <Future at 0x7f91c6f18070 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:06,390 - INFO - log parsing took 2.217 s, parsing into 617 templates
+2024-12-17 10:58:06,398 - INFO - Total length is 41998, cut into 840 sequences
+2024-12-17 10:58:06,449 - INFO - log parsing took 2.194 s, parsing into 623 templates
+2024-12-17 10:58:06,456 - INFO - Total length is 41768, cut into 836 sequences
+2024-12-17 10:58:06,539 - INFO - Iterative clustering took 0.138 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:06,571 - INFO - Iterative clustering took 0.114 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:07,124 - INFO - log parsing took 2.332 s, parsing into 618 templates
+2024-12-17 10:58:07,147 - INFO - Total length is 41982, cut into 840 sequences
+2024-12-17 10:58:07,683 - INFO - log parsing took 2.728 s, parsing into 623 templates
+2024-12-17 10:58:07,698 - INFO - Total length is 42033, cut into 841 sequences
+2024-12-17 10:58:07,812 - INFO - log parsing took 2.552 s, parsing into 620 templates
+2024-12-17 10:58:07,821 - INFO - Total length is 42310, cut into 847 sequences
+2024-12-17 10:58:07,835 - ERROR - exception calling callback for <Future at 0x7f91c6f0fa90 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:07,881 - INFO - log parsing took 2.630 s, parsing into 624 templates
+2024-12-17 10:58:07,891 - INFO - Total length is 42168, cut into 844 sequences
+2024-12-17 10:58:07,945 - INFO - log parsing took 2.695 s, parsing into 621 templates
+2024-12-17 10:58:07,955 - INFO - Total length is 42148, cut into 843 sequences
+2024-12-17 10:58:08,004 - INFO - log parsing took 2.759 s, parsing into 624 templates
+2024-12-17 10:58:08,023 - INFO - Total length is 41705, cut into 835 sequences
+2024-12-17 10:58:08,079 - INFO - Iterative clustering took 0.932 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:08,080 - ERROR - exception calling callback for <Future at 0x7f91c6f0fa00 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:08,316 - INFO - Iterative clustering took 0.612 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:08,345 - INFO - Iterative clustering took 0.453 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:08,627 - INFO - Iterative clustering took 0.672 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:08,633 - INFO - Iterative clustering took 0.812 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:08,653 - INFO - Iterative clustering took 0.629 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:10,903 - ERROR - exception calling callback for <Future at 0x7f91c6f0f850 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:11,442 - ERROR - exception calling callback for <Future at 0x7f91c6f0f6a0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:11,726 - ERROR - exception calling callback for <Future at 0x7f91c6f0f640 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:11,967 - ERROR - exception calling callback for <Future at 0x7f91c6f0f310 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:12,094 - ERROR - exception calling callback for <Future at 0x7f91c6f0f460 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:12,096 - ERROR - exception calling callback for <Future at 0x7f91c6f0f280 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:12,262 - INFO - log parsing took 2.971 s, parsing into 622 templates
+2024-12-17 10:58:12,286 - INFO - log parsing took 3.123 s, parsing into 622 templates
+2024-12-17 10:58:12,294 - INFO - Total length is 42496, cut into 850 sequences
+2024-12-17 10:58:12,304 - INFO - Total length is 42117, cut into 843 sequences
+2024-12-17 10:58:12,820 - INFO - Iterative clustering took 0.476 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:13,035 - INFO - Iterative clustering took 0.740 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:15,220 - ERROR - exception calling callback for <Future at 0x7f91c6f0f0a0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:15,255 - ERROR - exception calling callback for <Future at 0x7f91c6faf490 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:15,478 - INFO - log parsing took 2.831 s, parsing into 628 templates
+2024-12-17 10:58:15,489 - INFO - Total length is 42219, cut into 845 sequences
+2024-12-17 10:58:15,586 - INFO - log parsing took 2.630 s, parsing into 625 templates
+2024-12-17 10:58:15,591 - INFO - Total length is 42077, cut into 842 sequences
+2024-12-17 10:58:15,630 - INFO - log parsing took 2.249 s, parsing into 626 templates
+2024-12-17 10:58:15,636 - INFO - log parsing took 2.068 s, parsing into 628 templates
+2024-12-17 10:58:15,642 - INFO - Total length is 42213, cut into 845 sequences
+2024-12-17 10:58:15,649 - INFO - Total length is 42026, cut into 841 sequences
+2024-12-17 10:58:15,709 - INFO - Iterative clustering took 0.220 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:15,717 - INFO - log parsing took 2.180 s, parsing into 620 templates
+2024-12-17 10:58:15,724 - INFO - log parsing took 2.613 s, parsing into 622 templates
+2024-12-17 10:58:15,729 - INFO - Total length is 42264, cut into 846 sequences
+2024-12-17 10:58:15,737 - INFO - Total length is 42060, cut into 842 sequences
+2024-12-17 10:58:16,024 - INFO - Iterative clustering took 0.433 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:16,057 - INFO - Iterative clustering took 0.408 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:16,304 - INFO - Iterative clustering took 0.542 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:16,310 - INFO - Iterative clustering took 0.669 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:16,386 - INFO - Iterative clustering took 0.657 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:18,867 - ERROR - exception calling callback for <Future at 0x7f91c6fafac0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:19,649 - ERROR - exception calling callback for <Future at 0x7f92027f4eb0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:19,724 - ERROR - exception calling callback for <Future at 0x7f91c5dcfe50 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:19,964 - ERROR - exception calling callback for <Future at 0x7f91c5dcfc70 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:20,055 - ERROR - exception calling callback for <Future at 0x7f91c5dcfb80 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:20,089 - ERROR - exception calling callback for <Future at 0x7f91c5dcfd60 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:20,247 - INFO - log parsing took 3.731 s, parsing into 628 templates
+2024-12-17 10:58:20,260 - INFO - Total length is 45002, cut into 901 sequences
+2024-12-17 10:58:20,334 - INFO - log parsing took 3.765 s, parsing into 622 templates
+2024-12-17 10:58:20,345 - INFO - Total length is 45057, cut into 902 sequences
+2024-12-17 10:58:20,440 - INFO - Iterative clustering took 0.180 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:20,459 - INFO - Iterative clustering took 0.113 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:23,055 - ERROR - exception calling callback for <Future at 0x7f91c5dcff40 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:23,360 - ERROR - exception calling callback for <Future at 0x7f91c5dda070 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:23,597 - INFO - log parsing took 3.227 s, parsing into 626 templates
+2024-12-17 10:58:23,603 - INFO - Total length is 44969, cut into 900 sequences
+2024-12-17 10:58:23,613 - INFO - log parsing took 2.354 s, parsing into 626 templates
+2024-12-17 10:58:23,649 - INFO - log parsing took 2.396 s, parsing into 625 templates
+2024-12-17 10:58:23,654 - INFO - Total length is 42433, cut into 849 sequences
+2024-12-17 10:58:23,689 - INFO - Total length is 41928, cut into 839 sequences
+2024-12-17 10:58:23,735 - INFO - log parsing took 2.332 s, parsing into 624 templates
+2024-12-17 10:58:23,741 - INFO - log parsing took 2.227 s, parsing into 626 templates
+2024-12-17 10:58:23,747 - INFO - log parsing took 2.211 s, parsing into 619 templates
+2024-12-17 10:58:23,751 - INFO - Total length is 42014, cut into 841 sequences
+2024-12-17 10:58:23,754 - INFO - Total length is 41730, cut into 835 sequences
+2024-12-17 10:58:23,767 - INFO - Total length is 41851, cut into 838 sequences
+2024-12-17 10:58:23,872 - INFO - Iterative clustering took 0.268 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:23,873 - INFO - Iterative clustering took 0.183 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:23,878 - INFO - Iterative clustering took 0.224 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:24,061 - INFO - Iterative clustering took 0.307 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:24,272 - INFO - Iterative clustering took 0.505 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:24,277 - INFO - Iterative clustering took 0.525 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:27,315 - ERROR - exception calling callback for <Future at 0x7f91c5dda340 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:27,360 - ERROR - exception calling callback for <Future at 0x7f91c5dda250 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:27,528 - ERROR - exception calling callback for <Future at 0x7f91c5dda160 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:27,902 - ERROR - exception calling callback for <Future at 0x7f91c5dda610 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:28,037 - ERROR - exception calling callback for <Future at 0x7f91c5dda430 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:28,038 - ERROR - exception calling callback for <Future at 0x7f91c5dda520 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:28,172 - INFO - log parsing took 3.884 s, parsing into 624 templates
+2024-12-17 10:58:28,186 - INFO - Total length is 41638, cut into 833 sequences
+2024-12-17 10:58:28,245 - INFO - log parsing took 3.698 s, parsing into 625 templates
+2024-12-17 10:58:28,254 - INFO - Total length is 42100, cut into 843 sequences
+2024-12-17 10:58:28,302 - INFO - Iterative clustering took 0.116 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:28,303 - ERROR - exception calling callback for <Future at 0x7f91c5dda700 state=finished raised ValueError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 52, in run
+    relations = property_mining(log_seqs=log_seqs,
+  File "/root/dev/LogShrink-main/python_compression/analyzer/property_miner.py", line 61, in property_mining
+    ori_index = np.array([range(idx*h, min((idx+1)* h, len(log_meta.eids))) for idx in idxs])
+ValueError: setting an array element with a sequence. The requested array has an inhomogeneous shape after 1 dimensions. The detected shape was (16,) + inhomogeneous part.
+2024-12-17 10:58:28,336 - INFO - Iterative clustering took 0.082 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:30,742 - ERROR - exception calling callback for <Future at 0x7f91c5dda7f0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:31,113 - INFO - log parsing took 2.290 s, parsing into 622 templates
+2024-12-17 10:58:31,119 - INFO - Total length is 41756, cut into 836 sequences
+2024-12-17 10:58:31,175 - INFO - log parsing took 2.308 s, parsing into 628 templates
+2024-12-17 10:58:31,180 - INFO - Total length is 41033, cut into 821 sequences
+2024-12-17 10:58:31,220 - INFO - log parsing took 1.991 s, parsing into 623 templates
+2024-12-17 10:58:31,226 - INFO - log parsing took 1.501 s, parsing into 623 templates
+2024-12-17 10:58:31,231 - INFO - Total length is 41793, cut into 836 sequences
+2024-12-17 10:58:31,239 - INFO - Total length is 41743, cut into 835 sequences
+2024-12-17 10:58:31,305 - INFO - log parsing took 1.995 s, parsing into 625 templates
+2024-12-17 10:58:31,311 - INFO - Total length is 41642, cut into 833 sequences
+2024-12-17 10:58:31,330 - INFO - log parsing took 1.786 s, parsing into 624 templates
+2024-12-17 10:58:31,353 - INFO - log parsing took 1.872 s, parsing into 624 templates
+2024-12-17 10:58:31,358 - INFO - Total length is 41649, cut into 833 sequences
+2024-12-17 10:58:31,365 - INFO - Total length is 41699, cut into 834 sequences
+2024-12-17 10:58:31,433 - INFO - Iterative clustering took 0.315 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:31,444 - INFO - Iterative clustering took 0.264 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:31,640 - INFO - Iterative clustering took 0.408 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:31,837 - INFO - Iterative clustering took 0.526 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:31,855 - INFO - Iterative clustering took 0.616 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:32,117 - INFO - Iterative clustering took 0.759 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:32,779 - INFO - Iterative clustering took 1.414 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:34,822 - ERROR - exception calling callback for <Future at 0x7f91c5dda9d0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:34,956 - ERROR - exception calling callback for <Future at 0x7f91c5dda8e0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:35,350 - ERROR - exception calling callback for <Future at 0x7f91c5ddae80 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:35,729 - ERROR - exception calling callback for <Future at 0x7f91c5ddaac0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:35,824 - ERROR - exception calling callback for <Future at 0x7f91c5ddabb0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:35,865 - ERROR - exception calling callback for <Future at 0x7f91c5ddad90 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:35,954 - ERROR - exception calling callback for <Future at 0x7f91c5ddaca0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:36,486 - INFO - log parsing took 4.484 s, parsing into 626 templates
+2024-12-17 10:58:36,492 - INFO - Total length is 42024, cut into 841 sequences
+2024-12-17 10:58:36,546 - INFO - Iterative clustering took 0.054 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:36,862 - INFO - log parsing took 0.904 s, parsing into 615 templates
+2024-12-17 10:58:36,870 - INFO - Total length is 31058, cut into 622 sequences
+2024-12-17 10:58:37,053 - INFO - Iterative clustering took 0.183 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:37,273 - ERROR - exception calling callback for <Future at 0x7f91c5ddaf70 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:37,277 - INFO - log parsing took 1.207 s, parsing into 625 templates
+2024-12-17 10:58:37,322 - INFO - Total length is 41720, cut into 835 sequences
+2024-12-17 10:58:37,438 - INFO - Iterative clustering took 0.116 s, generating 1 clusters and 0 mismatched data
+2024-12-17 10:58:37,930 - ERROR - exception calling callback for <Future at 0x7f91c5de0190 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 10:58:38,158 - ERROR - exception calling callback for <Future at 0x7f91c5de00a0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 11:02:22,166 - INFO - ==============================Processing dataset ISP-23_gzip===========================================
+2024-12-17 11:02:22,166 - INFO - ARGS: encode mode: E, column mode: False
+2024-12-17 11:02:22,918 - INFO - log parsing took 0.002 s, parsing into 0 templates
+2024-12-17 11:02:22,918 - INFO - Total length is 0, cut into 1 sequences
+2024-12-17 11:02:22,918 - ERROR - exception calling callback for <Future at 0x7f0f251a51c0 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'
+2024-12-17 11:02:23,587 - INFO - log parsing took 0.093 s, parsing into 105 templates
+2024-12-17 11:02:23,589 - INFO - Total length is 15871, cut into 318 sequences
+2024-12-17 11:02:23,594 - INFO - Iterative clustering took 0.006 s, generating 1 clusters and 0 mismatched data
+2024-12-17 11:02:23,748 - ERROR - exception calling callback for <Future at 0x7f0f25199f10 state=finished raised AttributeError>
+Traceback (most recent call last):
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 330, in _invoke_callbacks
+    callback(self)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 130, in procFiles_result
+    atomic_addTime(future.result())
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/lib64/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/usr/lib64/python3.9/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/root/dev/LogShrink-main/python_compression/run.py", line 170, in procFiles
+    logshrink.run(
+  File "/root/dev/LogShrink-main/python_compression/logshrink.py", line 79, in run
+    compress(log_meta,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 31, in compress
+    output_csv(arr_list=log_meta.headers, num_col=log_meta.header_num, outdir=outdir, relations=relations,
+  File "/root/dev/LogShrink-main/python_compression/compression/compress.py", line 122, in output_csv
+    for i, arr in arr_list.items():
+AttributeError: 'numpy.ndarray' object has no attribute 'items'

@@ -1,45 +1,57 @@
-## 📦 Overview
+## Overview
 
-This repository contains the source code for the paper "DNSLogzip：A Novel Approach to Fast and High-Ratio Compression for DNS Logs". This paper has been accepted by ACM SIGCOMM' 25.
+This repository contains the source code for the paper "*DNSLogzip*：A Novel Approach to Fast and High-Ratio Compression for DNS Logs". This paper has been accepted by ACM SIGCOMM' 25.
 
-**DNSLogzip** is a lightweight, high-performance command-line tool designed for the compression and decompression of raw DNS log data. It can processe raw data stream and generate the prepressed log data, which can be compressed with a general compressor, such as gzip, bzip2 or lzma.
-
----
-
-## 🚀 Features
-
-- Stream-based lossless compression and decompression via stdin/stdout
-- Modular design: selectively apply the Data Transformer module and the Data Reducer module
-- Customizable buffer size (i.e., the parameter L)
-- Customizable numeric encoding base (i.e., the parameter  E)
-- Simple CLI interface for easy integration into pipelines
+***DNSLogzip*** is a lightweight, high-performance command-line tool designed for the compression and decompression of raw DNS log data. It can processe raw data stream and generate the prepressed log data, which can be compressed with a general compressor, such as gzip, bzip2 or lzma.
 
 ---
 
-## 📁 Build Instructions
+### Prerequisites:
+
+- Software dependencies
+
+​     python >= 3.9.21
+​     gcc >= 11.4.1
+
+​     gzip == 1.12
+​     7za == 16.02
+​     bzip2 == 1.0.8
+
+​    **Recommendation:** Rocky Linux release 9.3 (Blue Onyx)
+
+- Memory (RAM)
+
+	**Minimum Requirement:** 16 GB
+---
+
+## Build and Installation Instructions
 
 1. Clone this repository:
    ```bash
    git clone https://github.com/dyunwei/DNSLogzip.git
    cd DNSLogzip
    ```
-
-2. Compile (example for C/C++ projects):
+2. Compile:
    ```bash
    make
    ```
-
+3. Installation:
+   ```bash
+   make install
+   ```
+4. Create ramdisk:
+   ```bash
+   mkdir -p /media/ramdisk
+	mount -t tmpfs -o size=8g tmpfs /media/ramdisk
+   mkdir /media/ramdisk/data
+   ```
+5. Set the environment variable **DNSLogzip_WorkingDir** to the path of the *DNSLogzip*.
+   ```bash
+   export DNSLogzip_WorkingDir=$(pwd)
+   ```
 ---
 
-## 🔧 Usage
-
-```bash
-cat DNS_log_raw_file | DNSLogzip [OPTIONS] > Preprocessed_log_file
-```
-
----
-
-## ⚙️ Options
+## *DNSLogzip* Options
 
 | Option       | Description |
 |--------------|-------------|
@@ -50,33 +62,98 @@ cat DNS_log_raw_file | DNSLogzip [OPTIONS] > Preprocessed_log_file
 
 ---
 
-## 💡 Examples
-
 ### Download log datasets:
-Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkrl9boIPv1tHtqZhvoyk8pS8f5R). Download and put them in the /tmp/ directory for testing.
 
-### Compress a raw DNS log file:
-```bash
-bin/DNSLogzip < /tmp/Public.log 2>>/dev/null | gzip > /tmp/Public.log.gz
-```
+Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkrl9boIPv1tHtqZhvoyk8pS8f5R). Download and put them in the **/media/ramdisk/data** directory for evaluation.
 
-### Decompress a compressed DNS log file:
-```bash
-gzip -c -d /tmp/Public.log.gz | bin/DNSLogzip -D  > /tmp/Public.DNSLogzip.log
-```
+## EXPERIMENTS REPRODUCTION
 
-### Verify lossless compression and decompression:
-```bash
-[root@testbed tmp]# cd /tmp
-[root@testbed tmp]# md5sum Public.DNSLogzip.log
-9953dd95b7fc07c26bb895dd23bc5768  Public.DNSLogzip.log
-[root@testbed tmp]# md5sum  /tmp/Public.log.txt
-9953dd95b7fc07c26bb895dd23bc5768   /tmp/Public.log
-```
+- Research questions:
+	**RQ1**: What is the overall performance of *DNSLogzip* in terms of compression ratio (CR), compression speed(CS), and decompression speed (DS)?
+	
+	*Experimental results demonstrate that DNSLogzip outperforms all baseline algorithms in both CR and CS.*
+
+- **RQ2**: What is the effect of each compression module within *DNSLogzip*?
+	
+	*Experimental results show our key modules Data Transformer (§4.2) and Data Reducer (§4.3) of DNSLogzip can effectively improve compression ratio.*
+	
+- **RQ3**: What is the impact of different configuration settings?
+	
+	*The effects align with expectations: increasing the chunk size (i.e., 𝐿) enhances compression ratio but reduces compression and decompression speed. In contrast, small changes in 𝐸 have a negligible impact on these metrics.*
+	
+	
+	
+- **RQ1**:
+  
+   - DNSLogzip and general compressors:
+   
+  ```bash
+  python3 $DNSLogzip_WorkingDir/script/Q1.py
+  ```
+	The above command will get the *DNSLogzip* and general compressor (gzip, bzip2 and lzma) results for **RQ1** and save the related results in **$DNSLogzip_WorkingDir/results/Q1.csv**
+  
+  
+  
+   - Advanced compressors:
+  ```bash
+   cd $DNSLogzip_WorkingDir/
+   sh ./script/Prepare.sh
+   
+   cd benchmark/bin/Denum/
+   # Get the Compression ratio and speed of Denum and print it on the console.
+   sh ./eval.sh
+   cd -
+   
+   cd benchmark/bin/LogShrink/
+   pip install -r requirements.txt
+   # Get the Compression ratio and speed of LogShrink and print it on the console.
+   sh ./eval.sh
+   cd -
+   
+   cd benchmark/bin/LogReducer/
+   # Get the Compression ratio and speed of LogReducer and print it on the console.
+   sh ./eval.sh
+   cd -
+   
+   cd benchmark/bin/LogArchive/
+   ln -s $DNSLogzip_WorkingDir/benchmark/bin/LogArchive/Archiver /usr/local/bin
+   # Get the Compression ratio and speed of LogArchive and print it on the console.
+   sh ./eval.sh
+   cd -
+  ```
+  
+   **Note**: The compression ratio of some advanced compression algorithms may be affected by the runtime environment, leading to slight fluctuations—generally within ±0.3. These fluctuations do not affect the related conclusions.
+  
+  
+  
+- **RQ2 & Q3**:
+	
+  ```bash
+   python3 $DNSLogzip_WorkingDir/script/Q2Q3.py
+  ```
+	The above command will get the *DNSLogzip* and general compressor (gzip, bzip2 and lzma) results for **RQ2 & RQ3** and save the related results in **$DNSLogzip_WorkingDir/results/Q2Q3.csv**
+	
+	
+	
+- **Result for Q1:**
+	  ![](Z:\AE\DNSLogzip\img\Q1.png)
+	  
+	  
+	  
+- **Result for Q2:**
+	
+	![](Z:\AE\DNSLogzip\img\Q2.png)
+	
+	
+	
+- **Result for Q3**
+	
+	![](Z:\AE\DNSLogzip\img\Q3L.png)
+	![](Z:\AE\DNSLogzip\img\Q3E.png)
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
 

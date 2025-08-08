@@ -15,12 +15,14 @@ CXXFLAGS := -O3
 CCOBJFLAGS := $(CXXFLAGS) -I $(INC_PATH) -c $(MACRO)
 LDFLAGS := -lm
 
+# install macros
+PREFIX ?= /usr/local
+INSTALL_BIN_PATH := $(DESTDIR)$(PREFIX)/bin
+
 # src files & obj files
 SRCS := $(foreach x, $(SRC_PATH), $(wildcard $(addprefix $(x)/*,.c*)))
 INCS := $(foreach x, $(INC_PATH), $(wildcard $(addprefix $(x)/*,.h*)))
 OBJS := $(addprefix $(OBJ_PATH)/, $(addsuffix .o, $(notdir $(basename $(SRCS)))))
-
-#$(info info: $(OBJS))
 
 # clean files list
 CLEAN_LIST := $(TARGET) \
@@ -52,4 +54,17 @@ clean:
 .PHONY: clean_all
 clean_all:
 	@echo CLEAN $(BIN_PATH) $(OBJ_PATH) 
-	@rm -rf $(BIN_PATH) $(OBJ_PATH) 
+	@rm -rf $(BIN_PATH) $(OBJ_PATH)
+
+# install rule
+.PHONY: install
+install: $(TARGET)
+	@echo "Installing $(TARGET) to $(INSTALL_BIN_PATH)"
+	@mkdir -p $(INSTALL_BIN_PATH)
+	@install -m 0755 $(TARGET) $(INSTALL_BIN_PATH)/$(TARGET_NAME)
+
+# uninstall rule
+.PHONY: uninstall
+uninstall:
+	@echo "Removing $(TARGET_NAME) from $(INSTALL_BIN_PATH)"
+	@rm -f $(INSTALL_BIN_PATH)/$(TARGET_NAME)
