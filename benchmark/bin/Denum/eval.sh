@@ -23,6 +23,7 @@ for dataset in "${datasets[@]}"; do
 		
 		echo "###" `date` ": Start evaluating Denum(${kernel}) on ${dataset}" "###"
 		
+		chmod a+x ./${exe}
 		cmd="./${exe} ${dataset} 100000 1 2>&1 >>eval.sh.log"
 		bash -c "${cmd}" 2>&1 >/dev/null
 		
@@ -34,26 +35,3 @@ for dataset in "${datasets[@]}"; do
 		echo -e "\n"
 	done
 done
-
-
-
-# ./denum_compress_gz ISP-23 100000 1 >> eval.result.txt 2>&1
-# echo "###ISP-23-gz done.\n" >> eval.result.txt 2>&1
-# ./denum_compress_gz ISP-24 100000 1 >> eval.result.txt 2>&1
-# echo "###ISP-24-gz done.\n" >> eval.result.txt 2>&1
-# ./denum_compress_gz Public  100000 1 >> eval.result.txt 2>&1
-# echo "###Public-gz done.\n" >> eval.result.txt 2>&1
-
-# ./denum_compress_bz2 ISP-23 100000 1 >> eval.result.txt 2>&1
-# echo "###ISP-23-bz2 done.\n" >> eval.result.txt 2>&1
-# ./denum_compress_bz2 ISP-24 100000 1 >> eval.result.txt 2>&1
-# echo "###ISP-24-bz2 done.\n" >> eval.result.txt 2>&1
-# ./denum_compress_bz2 Public  100000 1 >> eval.result.txt 2>&1
-# echo "###Public-bz2 done.\n" >> eval.result.txt 2>&1
-
-# ./denum_compress_7z ISP-23 100000 1 >> eval.result.txt 2>&1
-# echo "###ISP-23-7z done.\n" >> eval.result.txt 2>&1
-# ./denum_compress_7z ISP-24 100000 1 >> eval.result.txt 2>&1
-# echo "###ISP-24-7z done.\n" >> eval.result.txt 2>&1
-# ./denum_compress_7z Public  100000 1 >> eval.result.txt 2>&1
-# echo "###Public-7z done.\n" >> eval.result.txt 2>&1
