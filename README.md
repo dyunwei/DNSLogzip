@@ -98,7 +98,7 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
   
   
   
-   - Advanced compressors:
+   - Other baselines (advanced compressors):
   ```bash
    cd $DNSLogzip_WorkingDir/
    sh ./script/Prepare.sh
