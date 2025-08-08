@@ -10,14 +10,17 @@ This repository contains the source code for the paper "*DNSLogzip*：A Novel Ap
 
 - Software dependencies
 
-​     python >= 3.9.21
-​     gcc >= 11.4.1
+	python >= 3.9.21
 
-​     gzip == 1.12
-​     7za == 16.02
-​     bzip2 == 1.0.8
+	gcc >= 11.4.1
 
-​    **Recommendation:** Rocky Linux release 9.3 (Blue Onyx)
+	gzip == 1.12
+
+	7za == 16.02 (dnf install p7zip -y)
+
+	bzip2 == 1.0.8
+
+	**Recommendation:** Rocky Linux release 9.3 (Blue Onyx)
 
 - Memory (RAM)
 
@@ -142,14 +145,18 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
 	  
 - **Result for Q2:**
 	
-	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q2.png)
+	<div align="center">
+	<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q2.png" width="50%">
+	</div>
 	
-	
+	**Note**: M0x0 indicates "No techniques applied"; M0x03 indicates "Use only the Data Transformer"; M0x7F indicates "Use full DNSLogzip (Data Transformer + Data Reducer)"
 	
 - **Result for Q3**
 	
-	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3L.png)
-	![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3E.png)
+	<div align="center">
+		<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3L.png" width="50%">
+		<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3E.png" width="50%">
+	</div>
 
 ---
 
