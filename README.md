@@ -143,7 +143,7 @@ Experimental datasets are [here](https://drive.google.com/drive/folders/1EfSdJkr
 - **Result for Q1:**
 	  ![](https://github.com/dyunwei/DNSLogzip/blob/main/img/Q1.png)
 	  
-	  
+	**Note**: Compression and decompression speeds are susceptible to runtime environment. The Compression ratios of DNSLogzip and general compressors should be reproducible.
 	  
 - **Result for Q2:**
 	
