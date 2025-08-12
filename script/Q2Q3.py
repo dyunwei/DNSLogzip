@@ -24,7 +24,7 @@ Params = ['M0x0', 'M0x03', 'M0x7F',
 		  'L10000', 'L15000', 'L20000', 'L25000', 'L30000', 'L35000', 'L40000', 'L45000', 'L50000', 'L55000'
 		  ]
 		  
-ColNames = ['No techniques', '+ Data Transformer', '+ Data Reducer',
+ColNames = ['No techniques', ' + Data Transformer', ' + Data Reducer',
 		  'E=16', 'E=20', 'E=24', 'E=28', 'E=32', 'E=36', 'E=40', 'E=44', 'E=48', 'E=52',
 		  'L=10000', 'L=15000', 'L=20000', 'L=25000', 'L=30000', 'L=35000', 'L=40000', 'L=45000', 'L=50000', 'L=55000'
 		  ]
