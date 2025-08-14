@@ -184,10 +184,3 @@ gzip -c -d /media/ramdisk/Q1.Public.DNSLogzip.txt.dlz.gz > /media/ramdisk/Q1.Pub
 		<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3L.png" width="50%">
 		<img src="https://github.com/dyunwei/DNSLogzip/blob/main/img/Q3E.png" width="50%">
 	</div>
-
----
-
-## License
-
-This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details.
-
